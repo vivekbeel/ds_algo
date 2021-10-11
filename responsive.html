@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//OPENHTMLTOPDF//DOC XHTML Character Entities Only 1.0//EN" "">
+<html>
+
+<head>
+  <link rel="stylesheet" href="responsive.css" />
+<style type="text/css">
+
+      * { 
+        margin: 0; border: none; padding: 0; 
+      }
+
+      @page {
+        
+        size: A4 portrait;
+        margin: 25mm;
+
+       
+        @top-center {
+          content: element(top-center);
+          /* padding: 1mm; border: 1px solid white; background: #eeeeee; */
+        }
+        
+      }
+
+      #top-center          { position: running(top-center);          }
+      
+      p { margin-bottom: 2mm; }
+      
+    </style>
+</head>
+<body>
+<p id="top-center">
+  <div id="page-header" class="page-header col-2">
+    <div class="pos-left">
+      <img src="https://karexpert.epc01.kxaction.com/dms/api/v1/mediagallery/image-response-entity?args=id:5f33ea0a60fca26cb9010e69&amp;application=dms" class="facility-logo" />
+    </div>
+    <div class="pos-right ">
+      <p>${line1}</p>
+      <p>${line2}</p>
+      <p>
+        ${line4},
+        <br />
+        ${line5}
+      </p>
+    </div>
+  </div>
+<div class="block" style="float: left;">
+<table>
+      <tbody>
+        <tr>
+          <td>
+            <!--Page content-->
+            <div class="mt-2">
+              <h2>Patient Details</h2>
+              <div class="headerTable col-3">
+                <div class="">
+                  <label>Patient Name</label>
+                  <span>${PatientName}</span>
+                </div>
+                <div class="">
+                  <label>Gender</label>
+                  <span>${Gender}</span>
+                </div>
+                <div class="">
+                  <label>Gender</label>
+                  <span>Male</span>
+                </div>
+                <div class="">
+                  <label>Age</label>
+                  <span>${Age}</span>
+                </div>
+                <div class="">
+                  <label>Doctor Name</label>
+                  <span>${DoctorName}</span>
+                </div>
+                <div class="">
+                  <label>Status</label>
+                  <span>${Status}</span>
+                </div>
+                <div class="">
+                  <label>Template Name</label>
+                  <span>${TemplateName}</span>
+                </div>
+                <div class="">
+                  <label>Admitting Doctor</label>
+                  <span>Pooja Singhal</span>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</p>
+  <div class="block" style="float: left;">
+    
+    <#list headers as header>
+      <b>${header.label}</b><br></br> <test> ${header.answer}</test><br></br><br></br>
+    </#list>
+    
+  </div>
+  <div id="page-footer" class="page-footer pos-center">
+    <p>Karexpert Technologies Pvt. Ltd.</p>
+  </div>
+</body>
+
+</html>
